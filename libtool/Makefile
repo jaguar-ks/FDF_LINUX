@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
+#    By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/10 00:28:28 by faksouss          #+#    #+#              #
-#    Updated: 2023/01/07 14:16:26 by faksouss         ###   ########.fr        #
+#    Updated: 2023/01/12 00:20:16 by deman_wolf       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,26 +22,33 @@ FLAGS = -Wall -Wextra -Werror -c
 
 CC = cc
 
-OBJS_MD = ${SRCS_MD:.c=.o}
+OBJ_DIR = obj
 
-HEADER = libft.h
+SRC_DIR = src
+
+SRC_F = $(addprefix $(SRC_DIR)/,SRCS_MD)
+
+OBJS_MD = $(addprefix $(OBJ_DIR)/,${SRCS_MD:.c=.o})
+
+HEADER = inc/libft.h
 
 NAME = libft.a
 
-RM = rm -f
+RM = rm -rf
 
-FT_PRINTF_ARCHIVE = ../
-
-all : ${NAME}
+all : $(OBJ_DIR) ${NAME}
 
 ${NAME} : ${OBJS_MD}
-	@ar -rc $@ ${OBJS_MD}
+	ar -rc $@ ${OBJS_MD}
 
-%.o : %.c ${HEADER}
+$(OBJ_DIR)/%.o : $(SRC_DIR)/%.c ${HEADER}
 	@${CC} ${FLAGS} $< -o $@
 
+$(OBJ_DIR) :
+	mkdir $@
+
 clean :
-	@${RM} ${OBJS_MD}
+	@${RM} $(OBJ_DIR)
 
 fclean : clean
 	@${RM} ${NAME}
@@ -49,3 +56,5 @@ fclean : clean
 re : fclean all
 
 .PHONY : all clean fclean re
+
+.SILENT : all clean fclean re $(NAME) $(OBJ_DIR)
