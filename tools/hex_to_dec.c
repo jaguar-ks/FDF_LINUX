@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 17:52:13 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/11 12:27:29 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/11 14:05:21 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	hex_to_dec(char *s)
 			if (s[i] >= 'A' && s[i] <= 'F')
 				s[i] = ft_tolower(s[i]);
 			if (s[i] > 'f' || s[i] < 'a')
-				exit(error(0));
+				exit(error(-3));
 			r = (r * 16) + (s[i] - 87);
 		}
 		else

@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:33:23 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/11 13:40:49 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/11 14:03:54 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ t_inf	**take_crd(char *map)
 	int		y;
 
 	rd.y = ft_split(map, '\n');
+	if (chck_map(rd.y) < 0)
+		exit(error(-3));
 	inf = (t_inf **)malloc(sizeof(t_inf *) * mtx_len(rd.y));
 	y = -1;
 	while (rd.y[++y])
