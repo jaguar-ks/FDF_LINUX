@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hex_to_dec.c                                       :+:      :+:    :+:   */
+/*   matrix_len.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/07 17:52:13 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/11 12:27:29 by faksouss         ###   ########.fr       */
+/*   Created: 2023/01/11 12:02:23 by faksouss          #+#    #+#             */
+/*   Updated: 2023/01/11 12:02:49 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../inc/fdf.h"
 
-int	hex_to_dec(char *s)
+int	mtx_len(char **mx)
 {
-	int		i;
-	int		r;
+	int	i;
 
-	i = 1;
-	r = 0;
-	while (s[++i])
-	{
-		if (!ft_isdigit(s[i]))
-		{
-			if (s[i] >= 'A' && s[i] <= 'F')
-				s[i] = ft_tolower(s[i]);
-			if (s[i] > 'f' || s[i] < 'a')
-				exit(error(0));
-			r = (r * 16) + (s[i] - 87);
-		}
-		else
-			r = (r * 16) + (s[i] - 48);
-	}
-	return (r);
+	i = 0;
+	while (mx[i])
+		i++;
+	return (i);
 }
