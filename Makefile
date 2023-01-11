@@ -6,7 +6,7 @@
 #    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 17:17:31 by deman_wolf        #+#    #+#              #
-#    Updated: 2023/01/11 13:27:35 by faksouss         ###   ########.fr        #
+#    Updated: 2023/01/11 14:23:53 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ T_S = error.c\
 		take_dm.c\
 		matrix_len.c\
 		checks.c\
+		init_drawing_unit.c\
 
 O_DIR = obj
 

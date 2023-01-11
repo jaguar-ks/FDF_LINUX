@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Wed Jan 11 13:27:51 2023
+# Make data base, printed on Wed Jan 11 14:24:03 2023
 
 # Variables
 
@@ -28,7 +28,7 @@ MD_S = parcing.c main.c
 CURDIR := /Users/faksouss/Desktop/FDF_LINUX
 # makefile
 SHELL = /bin/sh
-# makefile (from `Makefile', line 40)
+# makefile (from `Makefile', line 41)
 RM = rm -rf
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
@@ -36,7 +36,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# makefile (from `Makefile', line 26)
+# makefile (from `Makefile', line 27)
 S_DIR = src
 # environment
 VSCODE_CWD = /
@@ -46,17 +46,18 @@ Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.ksktyfeYF5/Render
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
-# makefile (from `Makefile', line 24)
+# makefile (from `Makefile', line 25)
 T_DIR = tools
 # environment
 ELECTRON_RUN_AS_NODE = 1
+ 
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
 SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.880RFkQFCR/Listeners
 # automatic
 %F = $(notdir $%)
-# makefile (from `Makefile', line 32)
+# makefile (from `Makefile', line 33)
 S_F = $(addprefix $(S_DIR)/,$(MD_S))
 # environment
 PWD = /Users/faksouss/Desktop/FDF_LINUX
@@ -74,9 +75,9 @@ VSCODE_CODE_CACHE_PATH = /Users/faksouss/Library/Application Support/Code/Cached
 LOGNAME = faksouss
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
-# makefile (from `Makefile', line 34)
+# makefile (from `Makefile', line 35)
 T_F = $(addprefix $(T_DIR)/,$(T_S))
-# makefile (from `Makefile', line 28)
+# makefile (from `Makefile', line 29)
 O_S = $(addprefix $(O_DIR)/,$(MD_S:.c=.o))
 # environment
 ZSH = /Users/faksouss/.oh-my-zsh
@@ -90,7 +91,7 @@ XPC_FLAGS = 0x0
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
-# makefile (from `Makefile', line 30)
+# makefile (from `Makefile', line 31)
 O_T = $(addprefix $(O_DIR)/,$(T_S:.c=.o))
 # environment
 SHLVL = 1
@@ -100,7 +101,7 @@ MAKE_VERSION := 3.81
 USER = faksouss
 # makefile
 .DEFAULT_GOAL := all
-# makefile (from `Makefile', line 42)
+# makefile (from `Makefile', line 43)
 NAME = fifo
 # environment
 LESS = -R
@@ -108,7 +109,7 @@ LESS = -R
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
-# makefile (from `Makefile', line 38)
+# makefile (from `Makefile', line 39)
 INC = inc/fdf.h
 # default
 .VARIABLES := 
@@ -120,7 +121,7 @@ TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n000cfvw0033pz/T/
 VSCODE_IPC_HOOK = /Users/faksouss/Library/Application Support/Code/1.72.0-main.sock
 # environment
 MallocNanoZone = 0
-# makefile (from `Makefile', line 22)
+# makefile (from `Makefile', line 23)
 O_DIR = obj
 # makefile
 MAKEFLAGS = Rrqp
@@ -143,7 +144,7 @@ MAKEFILES :=
 # automatic
 <F = $(notdir $<)
 # makefile (from `Makefile', line 16)
-T_S = error.c hex_to_dec.c take_dm.c matrix_len.c checks.c 
+T_S = error.c hex_to_dec.c take_dm.c matrix_len.c checks.c init_drawing_unit.c 
 # environment
 PAGER = less
 # environment
@@ -154,7 +155,7 @@ SECURITYSESSIONID = 186a8
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
-# makefile (from `Makefile', line 36)
+# makefile (from `Makefile', line 37)
 FLAGS = -Wall -Wextra 
 # default
 .INCLUDE_DIRS = /usr/local/include
@@ -165,7 +166,7 @@ LANG = C
 # environment
 VSCODE_PID = 47214
 # variable set hash-table stats:
-# Load=76/1024=7%, Rehash=0, Collisions=17/121=14%
+# Load=76/1024=7%, Rehash=0, Collisions=17/123=14%
 
 # Pattern-specific Variable Values
 
@@ -173,20 +174,24 @@ VSCODE_PID = 47214
 
 # Directories
 
-# . (device 16777227, inode 2059152): 13 files, no impossibilities.
+# tools (device 16777227, inode 2059368): 8 files, no impossibilities so far.
+# . (device 16777227, inode 2059152): 14 files, no impossibilities.
+# src (device 16777227, inode 2059365): 4 files, no impossibilities.
+# inc (device 16777227, inode 2059222): 3 files, no impossibilities so far.
 
-# 13 files, no impossibilities in 1 directories.
+ 
+# 29 files, no impossibilities in 4 directories.
 
 # Implicit Rules
 
 obj/%.o: src/%.c inc/fdf.h
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	@#@cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ #[LINUX]#
 	@cc $(FLAGS) -c $< -o $@
 	
 
 obj/%.o: tools/%.c inc/fdf.h
-#  commands to execute (from `Makefile', line 56):
+#  commands to execute (from `Makefile', line 57):
 	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
 	@cc $(FLAGS) -c $< -o $@
 	
@@ -195,6 +200,24 @@ obj/%.o: tools/%.c inc/fdf.h
 
 # Files
 
+# Not a target:
+tools/error.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 14:08:15
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+tools/take_dm.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 11:40:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
 all: obj fifo
 #  Command-line target.
 #  Implicit rule search has been done.
@@ -202,7 +225,16 @@ all: obj fifo
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/2=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+
+# Not a target:
+tools/matrix_len.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 12:02:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 .PHONY: fifo clean fclean re
 #  Implicit rule search has not been done.
@@ -210,10 +242,26 @@ all: obj fifo
 #  File has not been updated.
 
 # Not a target:
-obj/main.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+inc/fdf.h:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 14:22:25
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+obj/main.o: src/main.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `main'
+#  Last modified 2023-01-11 14:23:11
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 53):
+	@#@cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ #[LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+	
 
 # Not a target:
 .SUFFIXES:
@@ -224,51 +272,122 @@ obj/main.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2023-01-11 13:27:35
+#  Last modified 2023-01-11 14:23:53
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-# Not a target:
-obj/error.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+obj/error.o: tools/error.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `error'
+#  Last modified 2023-01-11 14:23:11
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 57):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+	
 
 # Not a target:
-obj/parcing.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+tools/checks.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 14:02:29
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+obj/parcing.o: src/parcing.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `parcing'
+#  Last modified 2023-01-11 14:23:11
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 53):
+	@#@cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ #[LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+	
+
+obj/take_dm.o: tools/take_dm.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `take_dm'
+#  Last modified 2023-01-11 14:23:11
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 57):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+	
+
+obj/matrix_len.o: tools/matrix_len.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `matrix_len'
+#  Last modified 2023-01-11 14:23:11
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 57):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+	
 
 # Not a target:
-obj/take_dm.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-obj/matrix_len.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+tools/hex_to_dec.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 14:05:21
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 67):
+#  commands to execute (from `Makefile', line 68):
 	make -C libtool fclean
 	$(RM) $(NAME)
 	
 
 # Not a target:
-obj/checks.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/main.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 14:23:07
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+tools/init_drawing_unit.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 14:23:01
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+obj/checks.o: tools/checks.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `checks'
+#  Last modified 2023-01-11 14:23:11
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 57):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+	
 
 .SILENT: fifo clean fclean re all obj
 #  Implicit rule search has not been done.
@@ -277,31 +396,21 @@ obj/checks.o:
 
 obj:
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: `'
-#  File does not exist.
+#  Last modified 2023-01-11 14:23:11
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := obj
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := 
-# automatic
-# | := 
-# automatic
-# < := 
-# automatic
-# ^ := 
-# automatic
-# ? := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
-#  commands to execute (from `Makefile', line 60):
+#  Successfully updated.
+#  commands to execute (from `Makefile', line 61):
 	mkdir $@
 	
+
+# Not a target:
+src/parcing.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 14:03:54
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 .DEFAULT:
@@ -315,36 +424,75 @@ re: fclean all
 #  File does not exist.
 #  File has not been updated.
 
-fifo: obj/parcing.o obj/main.o obj/error.o obj/hex_to_dec.o obj/take_dm.o obj/matrix_len.o obj/checks.o
+fifo: obj/parcing.o obj/main.o obj/error.o obj/hex_to_dec.o obj/take_dm.o obj/matrix_len.o obj/checks.o obj/init_drawing_unit.o
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 47):
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+#  commands to execute (from `Makefile', line 48):
 	make -C libtool
 	# cc $(FLAGS) $^ libtool/libft.a -Lmlx -lmlx -L/usr/lib -Imlx -lXext -lX11 -lm -lz -o $@ #[LINUX]#
 	cc $(FLAGS) $^ libtool/libft.a -lmlx -framework OpenGL -framework AppKit -o $@
 	
 
-# Not a target:
-obj/hex_to_dec.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+obj/hex_to_dec.o: tools/hex_to_dec.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `hex_to_dec'
+#  Last modified 2023-01-11 14:23:11
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 57):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+	
 
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 63):
+#  commands to execute (from `Makefile', line 64):
 	make -C libtool clean
- 
 	$(RM) $(O_DIR)
 	
 
+obj/init_drawing_unit.o: tools/init_drawing_unit.c inc/fdf.h
+ 
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `init_drawing_unit'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/init_drawing_unit.o
+# automatic
+# % := 
+# automatic
+# * := init_drawing_unit
+# automatic
+# + := tools/init_drawing_unit.c inc/fdf.h
+# automatic
+# | := 
+# automatic
+# < := tools/init_drawing_unit.c
+# automatic
+# ^ := tools/init_drawing_unit.c inc/fdf.h
+# automatic
+# ? := tools/init_drawing_unit.c inc/fdf.h
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/16=6%
+#  commands to execute (from `Makefile', line 57):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+	
+
 # files hash-table stats:
-# Load=18/1024=2%, Rehash=0, Collisions=0/54=0%
+# Load=28/1024=3%, Rehash=0, Collisions=0/110=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -356,6 +504,6 @@ clean:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Jan 11 13:27:51 2023
+# Finished Make data base on Wed Jan 11 14:24:03 2023
 
  

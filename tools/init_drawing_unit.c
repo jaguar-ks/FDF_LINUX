@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   init_drawing_unit.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 20:16:54 by deman_wolf        #+#    #+#             */
-/*   Updated: 2023/01/11 14:24:44 by faksouss         ###   ########.fr       */
+/*   Created: 2023/01/11 14:15:59 by faksouss          #+#    #+#             */
+/*   Updated: 2023/01/11 14:23:01 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../inc/fdf.h"
 
-int	main(int ac, char **av)
+int	init_drawing_unit(t_dmt dm)
 {
-	void	*mlx;
-	void	*win;
-	t_inf	**crd;
-	char	*map;
-	t_dmt	dm;
+	int	md;
+	int	wd;
+	int	du;
 
-	if (ac == 2)
-	{
-		crd = read_map(av[1], &map);
-		dm = take_dmnt(map);
-		mlx = mlx_init();
-		win = mlx_new_window(mlx, W_HT, W_WT, av[1]);
-		printf("|%d|\n", init_drawing_unit(dm));
-		mlx_loop(mlx);
-	}
+	wd = sqrt(pow(W_HT, 2) + pow(W_WT, 2));
+	md = sqrt(pow(dm.ht, 2) + pow(dm.wt, 2));
+	du = (wd / 2) / md;
+	if (du < 1)
+		du = 1;
+	return (du);
 }
