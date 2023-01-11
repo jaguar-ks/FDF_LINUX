@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
+#    By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 17:17:31 by deman_wolf        #+#    #+#              #
-#    Updated: 2023/01/11 17:05:57 by faksouss         ###   ########.fr        #
+#    Updated: 2023/01/11 23:51:35 by deman_wolf       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ S_F = $(addprefix $(S_DIR)/,$(MD_S))
 
 T_F = $(addprefix $(T_DIR)/,$(T_S))
 
-FLAGS = -Wall -Wextra #-Werror
+FLAGS = -Wall -Wextra -Werror
 
 INC = inc/fdf.h
 
@@ -50,12 +50,12 @@ all: $(O_DIR) $(NAME)
 
 $(NAME): $(O_S) $(O_T)
 	make -C libtool
-	# cc $(FLAGS) $^ libtool/libft.a -Lmlx -lmlx -L/usr/lib -Imlx -lXext -lX11 -lm -lz -o $@ #[LINUX]#
-	cc $(FLAGS) $^ libtool/libft.a -lmlx -framework OpenGL -framework AppKit -o $@
+	cc $(FLAGS) $^ libtool/libft.a -Lmlx -lmlx -L/usr/lib -Imlx -lXext -lX11 -lm -lz -o $@ #[LINUX]#
+	#cc $(FLAGS) $^ libtool/libft.a -lmlx -framework OpenGL -framework AppKit -o $@
 
 $(O_DIR)/%.o: $(S_DIR)/%.c $(INC) 
-	@#@cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ #[LINUX]#
-	@cc $(FLAGS) -c $< -o $@
+	@cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ #[LINUX]#
+	@#@cc $(FLAGS) -c $< -o $@
 
 $(O_DIR)/%.o: $(T_DIR)/%.c $(INC) 
 	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#

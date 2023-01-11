@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:39:01 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/11 17:08:05 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/11 23:51:17 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 # define FDF_H
 
 # include "../libtool/libft.h"
-# include <mlx.h> // MAC
-// # include "../mlx/mlx.h" // LINUX
+// # include <mlx.h> // MAC
+# include "../mlx/mlx.h" // LINUX
 
-# define W_HT 1500
-# define W_WT 1000
+# define W_HT 750
+# define W_WT 500
 
 /*the map demantions*/
 typedef struct f_dmt
