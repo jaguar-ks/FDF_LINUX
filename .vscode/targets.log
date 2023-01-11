@@ -1,0 +1,404 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Jan 11 11:36:37 2023
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# environment
+VSCODE_CWD = /home/deman_wolf
+# environment
+WINDOWPATH = 2
+# environment
+LESS_TERMCAP_me = [0m
+# environment
+GDM_LANG = en_US.UTF-8
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# makefile (from 'Makefile', line 19)
+MD_O = $(MD_S:.c=.o)
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/deman_wolf/Desktop/new_fdf
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/share/gnome:/home/deman_wolf/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/
+# environment
+OLDPWD = /home/deman_wolf
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/deman_wolf/.config/Code/CachedData/5235c6bb189b60b01b1f49062f4ffa42384f8c91
+# environment
+LANG = C
+# environment
+POWERSHELL_UPDATECHECK = Off
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# default
+.LOADED := 
+# environment
+LESS_TERMCAP_md = [1;36m
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# environment
+LESS_TERMCAP_so = [01;33m
+# makefile (from 'Makefile', line 13)
+MD_S = tools/error.c tools/hex_to_dec.c tools/take_dm.c src/parcing.c src/main.c 
+# makefile
+CURDIR := /home/deman_wolf/Desktop/new_fdf
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+LESS_TERMCAP_ue = [0m
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = gnome
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 2400
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 21)
+FLAGS = -Wall -Wextra
+# environment
+SESSION_MANAGER = local/jaguar:@/tmp/.ICE-unix/1551,unix/jaguar:/tmp/.ICE-unix/1551
+# automatic
+*F = $(notdir $*)
+# environment
+QT_QPA_PLATFORMTHEME = qt5ct
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# environment
+LESS_TERMCAP_us = [1;32m
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+SHLVL = 0
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/deman_wolf/.dotnet/tools
+# environment
+LESS_TERMCAP_se = [0m
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = en_US:en
+# automatic
+^F = $(notdir $^)
+# environment
+COMMAND_NOT_FOUND_INSTALL_PROMPT = 1
+# environment
+LESS_TERMCAP_mb = [1;31m
+# environment
+INVOCATION_ID = 29be2e6bb1c048758b35091ee79b7ad9
+# environment
+USERNAME = deman_wolf
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 23)
+INC = inc/fdf.h
+# makefile (from 'Makefile', line 27)
+NAME = fifo
+# environment
+XDG_CURRENT_DESKTOP = GNOME
+# environment
+LS_COLORS = :ow=30;44:
+# automatic
++F = $(notdir $+)
+# environment
+DESKTOP_SESSION = gnome
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = GNOME
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = deman_wolf
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 1577
+# makefile (from 'Makefile', line 25)
+RM = rm -rf
+# environment
+DISPLAY = :1
+# environment
+USER = deman_wolf
+# environment
+GTK_MODULES = gail:atk-bridge
+# default
+MAKE_VERSION := 4.3
+# environment
+MANAGERPID = 1344
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2400
+# environment
+SSH_AGENT_PID = 1505
+# environment
+_ = /usr/share/code/code
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+POWERSHELL_TELEMETRY_OPTOUT = 1
+# environment
+JOURNAL_STREAM = 8:24154
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/deman_wolf
+# environment
+QT_IM_MODULE = ibus
+# environment
+_JAVA_OPTIONS = -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-518d13f2-1.74.0-main.sock
+# environment
+DOTNET_CLI_TELEMETRY_OPTOUT = 1
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+GDMSESSION = gnome
+# variable set hash-table stats:
+# Load=111/1024=11%, Rehash=0, Collisions=11/151=7%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# inc (device 66311, inode 2387514): 1 files, no impossibilities so far.
+# tools (device 66311, inode 2387513): 3 files, no impossibilities so far.
+# . (device 66311, inode 2387411): 12 files, no impossibilities.
+
+# 16 files, no impossibilities in 3 directories.
+
+# Implicit Rules
+
+%.o: %.c inc/fdf.h
+#  recipe to execute (from 'Makefile', line 36):
+	cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@
+
+# 1 implicit rules, 0 (0.0%) terminal.
+# Files
+
+tools/error.o: tools/error.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'tools/error'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := tools/error.o
+# automatic
+# * := tools/error
+# automatic
+# < := tools/error.c
+# automatic
+# + := tools/error.c inc/fdf.h
+# automatic
+# % := 
+# automatic
+# ^ := tools/error.c inc/fdf.h
+# automatic
+# ? := tools/error.c inc/fdf.h
+# automatic
+# | := 
+# variable set hash-table stats:
+ 
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  recipe to execute (from 'Makefile', line 36):
+	cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-10 20:26:44.580922765
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+tools/hex_to_dec.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+fifo: tools/error.o tools/hex_to_dec.o tools/take_dm.o src/parcing.o src/main.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+#  recipe to execute (from 'Makefile', line 32):
+	make -C libtool
+	cc $(FLAGS) $^ libtool/libft.a -Lmlx -lmlx -L/usr/lib -Imlx -lXext -lX11 -lm -lz -o $@
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 39):
+	make -C libtool clean
+	$(RM) src/*.o tools/*.o *.o
+
+# Not a target:
+src/parcing.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+src/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: fifo
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 43):
+	make -C libtool fclean
+	$(RM) $(NAME)
+
+# Not a target:
+inc/fdf.h:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-10 20:23:59.240046547
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+tools/error.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-07 17:17:48.037453
+#  File has been updated.
+#  Successfully updated.
+
+.PHONY: fifo clean fclean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+tools/take_dm.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=16/1024=2%, Rehash=0, Collisions=0/46=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 34 / storage = 287 B / avg = 8 B
+# current buf: size = 8162 B / used = 287 B / count = 34 / avg = 8 B
+
+# strcache performance: lookups = 60 / hit rate = 43%
+# hash-table stats:
+# Load=34/8192=0%, Rehash=0, Collisions=0/60=0%
+# Finished Make data base on Wed Jan 11 11:36:37 2023
+
+ 
