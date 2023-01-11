@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:27:41 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/11 17:32:15 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/11 18:43:20 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,16 @@ void	draw_map(t_fdf f)
 	while (++y < f.dm.ht - 1)
 	{
 		x = -1;
+		p3 = next_y(f, p1);
 		p2 = next_x(f, p1);
+		draw_line(f, p1, p3);
 		while (++x < f.dm.wt - 1)
 		{
 			p3 = next_y(f, p2);
-			draw_line(f, p1, p2);
 			draw_line(f, p2, p3);
+			draw_line(f, p1, p2);
 			p2 = next_x(f, p2);
 		}
-		p1 = next_y(f, p1); 
+		p1 = next_y(f, p1);
 	}
 }
