@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   draw_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 20:16:54 by deman_wolf        #+#    #+#             */
-/*   Updated: 2023/01/11 17:26:52 by faksouss         ###   ########.fr       */
+/*   Created: 2023/01/11 15:27:41 by faksouss          #+#    #+#             */
+/*   Updated: 2023/01/11 17:32:15 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../inc/fdf.h"
 
-int	main(int ac, char **av)
+void	draw_map(t_fdf f)
 {
-	t_fdf	f;
-	char	*map;
+	int		x;
+	int		y;
+	t_pst	p1;
+	t_pst	p2;
+	t_pst	p3;
 
-	if (ac == 2)
+	f.du = init_drawing_unit(f.dm);
+	p1 = start_point(f.crd[0][0]);
+	y = -1;
+	while (++y < f.dm.ht - 1)
 	{
-		f.crd = read_map(av[1], &map);
-		f.dm = take_dmnt(map);
-		f.mlx = mlx_init();
-		f.win = mlx_new_window(f.mlx, W_HT, W_WT, av[1]);
-		draw_map(f);
-		// st.x = 50;
-		// en.x = 170;
-		// st.y = 150;
-		// en.y = 360;
-		// st.cl = 0xFFFF;
-		// en.cl = 0xFFFFFF;
-		// draw_line(f, st, en);
-		mlx_loop(f.mlx);
+		x = -1;
+		p2 = next_x(f, p1);
+		while (++x < f.dm.wt - 1)
+		{
+			p3 = next_y(f, p2);
+			draw_line(f, p1, p2);
+			draw_line(f, p2, p3);
+			p2 = next_x(f, p2);
+		}
+		p1 = next_y(f, p1); 
 	}
 }

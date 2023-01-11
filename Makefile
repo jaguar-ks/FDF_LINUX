@@ -6,11 +6,13 @@
 #    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 17:17:31 by deman_wolf        #+#    #+#              #
-#    Updated: 2023/01/11 14:23:53 by faksouss         ###   ########.fr        #
+#    Updated: 2023/01/11 17:05:57 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 MD_S = 	parcing.c\
+	 	draw_line.c\
+	 	draw_map.c\
 		main.c\
 
 T_S = error.c\
@@ -19,6 +21,8 @@ T_S = error.c\
 		matrix_len.c\
 		checks.c\
 		init_drawing_unit.c\
+		next_point.c\
+		init_point.c\
 
 O_DIR = obj
 

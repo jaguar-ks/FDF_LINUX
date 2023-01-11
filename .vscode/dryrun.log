@@ -1,9 +1,26 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/faksouss/Desktop/FDF_LINUX'
+mkdir obj
+#@cc -Wall -Wextra  -I/usr/include -Imlx -O3 -c src/parcing.c -o obj/parcing.o #[LINUX]#
+cc -Wall -Wextra  -c src/parcing.c -o obj/parcing.o
+#@cc -Wall -Wextra  -I/usr/include -Imlx -O3 -c src/main.c -o obj/main.o #[LINUX]#
+cc -Wall -Wextra  -c src/main.c -o obj/main.o
+#cc -Wall -Wextra  -I/usr/include -Imlx -O3 -c tools/error.c -o obj/error.o [LINUX]#
+cc -Wall -Wextra  -c tools/error.c -o obj/error.o
+#cc -Wall -Wextra  -I/usr/include -Imlx -O3 -c tools/hex_to_dec.c -o obj/hex_to_dec.o [LINUX]#
+cc -Wall -Wextra  -c tools/hex_to_dec.c -o obj/hex_to_dec.o
+#cc -Wall -Wextra  -I/usr/include -Imlx -O3 -c tools/take_dm.c -o obj/take_dm.o [LINUX]#
+cc -Wall -Wextra  -c tools/take_dm.c -o obj/take_dm.o
+#cc -Wall -Wextra  -I/usr/include -Imlx -O3 -c tools/matrix_len.c -o obj/matrix_len.o [LINUX]#
+cc -Wall -Wextra  -c tools/matrix_len.c -o obj/matrix_len.o
+#cc -Wall -Wextra  -I/usr/include -Imlx -O3 -c tools/checks.c -o obj/checks.o [LINUX]#
+cc -Wall -Wextra  -c tools/checks.c -o obj/checks.o
 #cc -Wall -Wextra  -I/usr/include -Imlx -O3 -c tools/init_drawing_unit.c -o obj/init_drawing_unit.o [LINUX]#
 cc -Wall -Wextra  -c tools/init_drawing_unit.c -o obj/init_drawing_unit.o
-make -C libtool
-# cc -Wall -Wextra  obj/parcing.o obj/main.o obj/error.o obj/hex_to_dec.o obj/take_dm.o obj/matrix_len.o obj/checks.o obj/init_drawing_unit.o libtool/libft.a -Lmlx -lmlx -L/usr/lib -Imlx -lXext -lX11 -lm -lz -o fifo #[LINUX]#
-cc -Wall -Wextra  obj/parcing.o obj/main.o obj/error.o obj/hex_to_dec.o obj/take_dm.o obj/matrix_len.o obj/checks.o obj/init_drawing_unit.o libtool/libft.a -lmlx -framework OpenGL -framework AppKit -o fifo
+#cc -Wall -Wextra  -I/usr/include -Imlx -O3 -c tools/next_point.c -o obj/next_point.o [LINUX]#
+cc -Wall -Wextra  -c tools/next_point.c -o obj/next_point.o
+ 
 make: Leaving directory `/Users/faksouss/Desktop/FDF_LINUX'
  
+make: *** No rule to make target `obj/init.o', needed by `fifo'.
+
