@@ -3,21 +3,48 @@
 /*                                                        :::      ::::::::   */
 /*   parcing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:33:23 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/11 12:59:23 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2023/01/11 13:40:49 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../inc/fdf.h"
+
+t_inf	*take_x_z_cl(char **y, int j)
+{
+	int		i;
+	t_inf	*inf;
+	char	**z;
+
+	inf = (t_inf *)malloc(sizeof(t_inf) * mtx_len(y));
+	i = -1;
+	while (y[++i])
+	{
+		inf[i].x = i;
+		inf[i].y = j;
+		z = ft_split(y[i], ',');
+		if (mtx_len(z) == 2)
+		{
+			inf[i].z = ft_atoi(z[0]);
+			inf[i].cl = hex_to_dec(z[1]);
+		}
+		else
+		{
+			inf[i].z = ft_atoi(z[0]);
+			inf[i].cl = 0xFFFFFF;
+		}
+		deallocate(z);
+	}
+	return (inf);
+}
 
 t_inf	**take_crd(char *map)
 {
 	t_inf	**inf;
 	t_rd	rd;
 	int		y;
-	int		x;
 
 	rd.y = ft_split(map, '\n');
 	inf = (t_inf **)malloc(sizeof(t_inf *) * mtx_len(rd.y));
@@ -25,25 +52,7 @@ t_inf	**take_crd(char *map)
 	while (rd.y[++y])
 	{
 		rd.x = ft_split(rd.y[y], ' ');
-		inf[y] = (t_inf *)malloc(sizeof(t_inf) * mtx_len(rd.x));
-		x = -1;
-		while (rd.x[++x])
-		{
-			inf[y][x].x = x;
-			inf[y][x].y = y;
-			rd.z = ft_split(rd.x[x], ',');
-			if (mtx_len(rd.z) == 2)
-			{
-				inf[y][x].z = ft_atoi(rd.z[0]);
-				inf[y][x].cl = hex_to_dec(rd.z[1]);
-			}
-			else
-			{
-				inf[y][x].z = ft_atoi(rd.z[0]);
-				inf[y][x].cl = 0xFFFFFF;
-			}
-			deallocate(rd.z);
-		}
+		inf[y] = take_x_z_cl(rd.x, y);
 		deallocate(rd.x);
 	}
 	return (deallocate(rd.y), inf);

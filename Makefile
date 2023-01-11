@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+         #
+#    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 17:17:31 by deman_wolf        #+#    #+#              #
-#    Updated: 2023/01/11 13:07:31 by deman_wolf       ###   ########.fr        #
+#    Updated: 2023/01/11 13:27:35 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,12 +45,12 @@ all: $(O_DIR) $(NAME)
 
 $(NAME): $(O_S) $(O_T)
 	make -C libtool
-	cc $(FLAGS) $^ libtool/libft.a -Lmlx -lmlx -L/usr/lib -Imlx -lXext -lX11 -lm -lz -o $@ #[LINUX]#
-	# cc $(FLAGS) $^ libtool/libft.a -lmlx -framework OpenGL -framework AppKit -o $@
+	# cc $(FLAGS) $^ libtool/libft.a -Lmlx -lmlx -L/usr/lib -Imlx -lXext -lX11 -lm -lz -o $@ #[LINUX]#
+	cc $(FLAGS) $^ libtool/libft.a -lmlx -framework OpenGL -framework AppKit -o $@
 
 $(O_DIR)/%.o: $(S_DIR)/%.c $(INC) 
-	@cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ #[LINUX]#
-	@#@cc $(FLAGS) -c $< -o $@
+	@#@cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ #[LINUX]#
+	@cc $(FLAGS) -c $< -o $@
 
 $(O_DIR)/%.o: $(T_DIR)/%.c $(INC) 
 	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#

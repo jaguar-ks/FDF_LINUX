@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 20:16:54 by deman_wolf        #+#    #+#             */
-/*   Updated: 2023/01/11 13:14:24 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2023/01/11 13:45:35 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int	main(int ac, char **av)
 	{
 		crd = read_map(av[1], &map);
 		dm = take_dmnt(map);
-		mlx = mlx_init();
-		win = mlx_new_window(mlx, 750, 500, av[1]);
-		printf("x==>%d\ny==>%d\n", dm.ht, dm.wt);
-		mlx_loop(mlx);
+		// mlx = mlx_init();
+		// win = mlx_new_window(mlx, 750, 500, av[1]);
+		printf("x==>%d\ny==>%d\n", dm.wt, dm.ht);
+		// mlx_loop(mlx);
 	}
 }
