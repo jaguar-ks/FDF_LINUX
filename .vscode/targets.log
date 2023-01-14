@@ -6,25 +6,25 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jan 12 00:13:29 2023
+# Make data base, printed on Sat Jan 14 17:45:02 2023
 
 # Variables
 
-# makefile (from 'Makefile', line 29)
+# makefile (from 'Makefile', line 30)
 T_DIR = tools
 # environment
 GDK_BACKEND = x11
 # environment
 LC_ALL = C
 # makefile (from 'Makefile', line 18)
-T_S = error.c hex_to_dec.c take_dm.c matrix_len.c checks.c init_drawing_unit.c next_point.c init_point.c 
+T_S = checks.c error.c hex_to_dec.c init_drawing_unit.c init_point.c matrix_len.c next_point.c take_dm.c take_z_scale.c 
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
 VSCODE_CWD = /home/deman_wolf
 # environment
 WINDOWPATH = 2
-# makefile (from 'Makefile', line 31)
+# makefile (from 'Makefile', line 32)
 S_DIR = src
 # environment
 LESS_TERMCAP_me = [0m
@@ -75,7 +75,7 @@ MD_S = parcing.c draw_line.c draw_map.c main.c
 # makefile
 CURDIR := /home/deman_wolf/Desktop/new_fdf
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -95,17 +95,17 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 2400
+VSCODE_PID = 2054
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# makefile (from 'Makefile', line 41)
+# makefile (from 'Makefile', line 42)
 FLAGS = -Wall -Wextra -Werror
-# makefile (from 'Makefile', line 27)
+# makefile (from 'Makefile', line 28)
 O_DIR = obj
 # environment
-SESSION_MANAGER = local/jaguar:@/tmp/.ICE-unix/1551,unix/jaguar:/tmp/.ICE-unix/1551
+SESSION_MANAGER = local/jaguar:@/tmp/.ICE-unix/1546,unix/jaguar:/tmp/.ICE-unix/1546
 # automatic
 *F = $(notdir $*)
 # environment
@@ -153,14 +153,14 @@ COMMAND_NOT_FOUND_INSTALL_PROMPT = 1
 # environment
 LESS_TERMCAP_mb = [1;31m
 # environment
-INVOCATION_ID = 29be2e6bb1c048758b35091ee79b7ad9
+INVOCATION_ID = 5a377cfeb1b548819c7ea6650b9f047c
 # environment
 USERNAME = deman_wolf
 # automatic
 ?F = $(notdir $?)
-# makefile (from 'Makefile', line 43)
+# makefile (from 'Makefile', line 44)
 INC = inc/fdf.h
-# makefile (from 'Makefile', line 47)
+# makefile (from 'Makefile', line 48)
 NAME = fifo
 # environment
 XDG_CURRENT_DESKTOP = GNOME
@@ -178,13 +178,13 @@ GNUMAKEFLAGS :=
 LOGNAME = deman_wolf
 # environment
 GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
-# makefile (from 'Makefile', line 35)
+# makefile (from 'Makefile', line 36)
 O_T = $(addprefix $(O_DIR)/,$(T_S:.c=.o))
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1577
-# makefile (from 'Makefile', line 45)
+SYSTEMD_EXEC_PID = 1572
+# makefile (from 'Makefile', line 46)
 RM = rm -rf
 # environment
 DISPLAY = :1
@@ -195,11 +195,11 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 1344
+MANAGERPID = 1335
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2400
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2054
 # environment
-SSH_AGENT_PID = 1505
+SSH_AGENT_PID = 1499
 # environment
 _ = /usr/share/code/code
 # environment
@@ -209,7 +209,7 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 POWERSHELL_TELEMETRY_OPTOUT = 1
 # environment
-JOURNAL_STREAM = 8:24154
+JOURNAL_STREAM = 8:26102
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -224,7 +224,7 @@ _JAVA_OPTIONS = -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
 ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-518d13f2-1.74.0-main.sock
-# makefile (from 'Makefile', line 39)
+# makefile (from 'Makefile', line 40)
 T_F = $(addprefix $(T_DIR)/,$(T_S))
 # environment
 DOTNET_CLI_TELEMETRY_OPTOUT = 1
@@ -234,11 +234,11 @@ DOTNET_CLI_TELEMETRY_OPTOUT = 1
 <F = $(notdir $<)
 # default
 SUFFIXES := 
-# makefile (from 'Makefile', line 37)
+# makefile (from 'Makefile', line 38)
 S_F = $(addprefix $(S_DIR)/,$(MD_S))
 # environment
 QT_AUTO_SCREEN_SCALE_FACTOR = 0
-# makefile (from 'Makefile', line 33)
+# makefile (from 'Makefile', line 34)
 O_S = $(addprefix $(O_DIR)/,$(MD_S:.c=.o))
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
@@ -247,7 +247,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 GDMSESSION = gnome
 # variable set hash-table stats:
-# Load=118/1024=12%, Rehash=0, Collisions=11/170=6%
+# Load=118/1024=12%, Rehash=0, Collisions=11/172=6%
 
 # Pattern-specific Variable Values
 
@@ -255,65 +255,116 @@ GDMSESSION = gnome
 
 # Directories
 
-# src (device 66311, inode 2387412): No files, no impossibilities so far.
-# tools (device 66311, inode 2387513): No files, no impossibilities so far.
-# . (device 66311, inode 2387411): 13 files, no impossibilities.
+# inc (device 66311, inode 2387514): 1 files, no impossibilities so far.
+# src (device 66311, inode 2387412): 7 files, no impossibilities.
+# tools (device 66311, inode 2387513): 11 files, no impossibilities so far.
+# . (device 66311, inode 2387411): 15 files, no impossibilities.
 
-# 13 files, no impossibilities in 3 directories.
+# 34 files, no impossibilities in 4 directories.
 
 # Implicit Rules
 
 obj/%.o: src/%.c inc/fdf.h
-#  recipe to execute (from 'Makefile', line 57):
+#  recipe to execute (from 'Makefile', line 58):
 	@cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ #[LINUX]#
 	@#@cc $(FLAGS) -c $< -o $@
 
 obj/%.o: tools/%.c inc/fdf.h
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 62):
 	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
 	@cc $(FLAGS) -c $< -o $@
 
 # 2 implicit rules, 0 (0.0%) terminal.
 # Files
 
-# Not a target:
-obj/error.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-obj/draw_line.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-obj/main.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-Makefile:
+obj/error.o: tools/error.c inc/fdf.h
 #  Implicit rule search has been done.
-#  Last modified 2023-01-11 23:51:35.340838656
+#  Implicit/static pattern stem: 'error'
+ 
+#  Last modified 2023-01-13 03:09:44.891329979
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 62):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+
+obj/draw_line.o: src/draw_line.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'draw_line'
+#  Last modified 2023-01-13 03:09:44.767331187
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 58):
+	@cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ #[LINUX]#
+	@#@cc $(FLAGS) -c $< -o $@
+
+obj/main.o: src/main.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  Last modified 2023-01-13 03:09:44.839330486
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 58):
+	@cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ #[LINUX]#
+	@#@cc $(FLAGS) -c $< -o $@
+
+# Not a target:
+src/draw_map.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-13 03:07:56.984633846
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-obj/matrix_len.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-13 02:42:17.014689136
+#  File has been updated.
+#  Successfully updated.
 
- 
-fifo: obj/parcing.o obj/draw_line.o obj/draw_map.o obj/main.o obj/error.o obj/hex_to_dec.o obj/take_dm.o obj/matrix_len.o obj/checks.o obj/init_drawing_unit.o obj/next_point.o obj/init_point.o
+# Not a target:
+tools/init_drawing_unit.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 23:45:12.509166034
+#  File has been updated.
+#  Successfully updated.
+
+obj/matrix_len.o: tools/matrix_len.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'matrix_len'
+#  Last modified 2023-01-13 03:09:44.983329084
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 62):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+
+fifo: obj/parcing.o obj/draw_line.o obj/draw_map.o obj/main.o obj/checks.o obj/error.o obj/hex_to_dec.o obj/init_drawing_unit.o obj/init_point.o obj/matrix_len.o obj/next_point.o obj/take_dm.o obj/take_z_scale.o
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 52):
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := fifo
+# automatic
+# * := 
+# automatic
+# < := obj/parcing.o
+# automatic
+# + := obj/parcing.o obj/draw_line.o obj/draw_map.o obj/main.o obj/checks.o obj/error.o obj/hex_to_dec.o obj/init_drawing_unit.o obj/init_point.o obj/matrix_len.o obj/next_point.o obj/take_dm.o obj/take_z_scale.o
+# automatic
+# % := 
+# automatic
+# ^ := obj/parcing.o obj/draw_line.o obj/draw_map.o obj/main.o obj/checks.o obj/error.o obj/hex_to_dec.o obj/init_drawing_unit.o obj/init_point.o obj/matrix_len.o obj/next_point.o obj/take_dm.o obj/take_z_scale.o
+# automatic
+# ? := obj/parcing.o obj/draw_line.o obj/draw_map.o obj/main.o obj/checks.o obj/error.o obj/hex_to_dec.o obj/init_drawing_unit.o obj/init_point.o obj/matrix_len.o obj/next_point.o obj/take_dm.o obj/take_z_scale.o
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/17=6%
+#  recipe to execute (from 'Makefile', line 53):
 	make -C libtool
 	cc $(FLAGS) $^ libtool/libft.a -Lmlx -lmlx -L/usr/lib -Imlx -lXext -lX11 -lm -lz -o $@ #[LINUX]#
 	#cc $(FLAGS) $^ libtool/libft.a -lmlx -framework OpenGL -framework AppKit -o $@
@@ -328,15 +379,40 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 68):
+#  recipe to execute (from 'Makefile', line 69):
 	make -C libtool clean
 	$(RM) $(O_DIR)
 
 # Not a target:
-obj/init_point.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/draw_line.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 23:45:12.509166034
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+tools/hex_to_dec.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 23:45:12.509166034
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/main.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-13 00:09:54.373774525
+#  File has been updated.
+#  Successfully updated.
+
+obj/init_point.o: tools/init_point.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'init_point'
+#  Last modified 2023-01-13 03:09:44.959329318
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 62):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
 
 re: fclean all
 #  Phony target (prerequisite of .PHONY).
@@ -344,32 +420,27 @@ re: fclean all
 #  File does not exist.
 #  File has not been updated.
 
+# Not a target:
+tools/take_dm.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-10 20:30:08.224938179
+#  File has been updated.
+#  Successfully updated.
+
 obj:
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
-#  File does not exist.
+#  Last modified 2023-01-13 03:09:45.051328423
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := obj
-# automatic
-# * := 
-# automatic
-# < := 
-# automatic
-# + := 
-# automatic
-# % := 
-# automatic
-# ^ := 
-# automatic
-# ? := 
-# automatic
-# | := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/12=8%
-#  recipe to execute (from 'Makefile', line 65):
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 66):
 	mkdir $@
+
+# Not a target:
+src/parcing.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 23:45:12.509166034
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 .DEFAULT:
@@ -377,11 +448,15 @@ obj:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-obj/parcing.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+obj/parcing.o: src/parcing.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'parcing'
+#  Last modified 2023-01-13 03:09:44.735331499
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 58):
+	@cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ #[LINUX]#
+	@#@cc $(FLAGS) -c $< -o $@
 
 all: obj fifo
 #  Command line target.
@@ -390,78 +465,162 @@ all: obj fifo
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 72):
+#  recipe to execute (from 'Makefile', line 73):
 	make -C libtool fclean
 	$(RM) $(NAME)
 
 # Not a target:
-obj/init_drawing_unit.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+inc/fdf.h:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-13 02:49:23.669392055
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
-obj/draw_map.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+tools/take_z_scale.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-13 02:50:30.481345299
+#  File has been updated.
+#  Successfully updated.
+
+obj/init_drawing_unit.o: tools/init_drawing_unit.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'init_drawing_unit'
+#  Last modified 2023-01-13 03:09:44.939329512
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 62):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
 
 # Not a target:
-obj/checks.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+tools/next_point.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-13 02:45:00.309840235
+#  File has been updated.
+#  Successfully updated.
+
+obj/draw_map.o: src/draw_map.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'draw_map'
+#  Last modified 2023-01-13 03:09:44.811330759
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 58):
+	@cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ #[LINUX]#
+	@#@cc $(FLAGS) -c $< -o $@
 
 # Not a target:
-obj/next_point.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+tools/error.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 23:45:12.509166034
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
-obj/take_dm.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+tools/matrix_len.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 12:46:45.016489416
+#  File has been updated.
+#  Successfully updated.
+
+obj/checks.o: tools/checks.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'checks'
+#  Last modified 2023-01-13 03:09:44.867330213
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 62):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+
+obj/next_point.o: tools/next_point.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'next_point'
+#  Last modified 2023-01-13 03:09:45.007328851
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 62):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+
+# Not a target:
+tools/checks.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-11 23:45:12.509166034
+#  File has been updated.
+#  Successfully updated.
+
+obj/take_dm.o: tools/take_dm.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'take_dm'
+#  Last modified 2023-01-13 03:09:45.027328657
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 62):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
 
 # Not a target:
 .SUFFIXES:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
+obj/hex_to_dec.o: tools/hex_to_dec.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'hex_to_dec'
+#  Last modified 2023-01-13 03:09:44.915329747
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 62):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+
 # Not a target:
-obj/hex_to_dec.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+tools/init_point.c:
+#  Implicit rule search has been done.
+#  Last modified 2023-01-12 00:02:00.018961292
+#  File has been updated.
+#  Successfully updated.
 
 .PHONY: fifo clean fclean re
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
+obj/take_z_scale.o: tools/take_z_scale.c inc/fdf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'take_z_scale'
+#  Last modified 2023-01-13 03:09:45.051328423
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 62):
+	@#cc $(FLAGS) -I/usr/include -Imlx -O3 -c $< -o $@ [LINUX]#
+	@cc $(FLAGS) -c $< -o $@
+
 # files hash-table stats:
-# Load=23/1024=2%, Rehash=0, Collisions=0/64=0%
+# Load=38/1024=4%, Rehash=0, Collisions=4/154=3%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 41 / storage = 393 B / avg = 9 B
-# current buf: size = 8162 B / used = 393 B / count = 41 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 92 / storage = 1084 B / avg = 11 B
+# current buf: size = 8162 B / used = 1084 B / count = 92 / avg = 11 B
 
-# strcache performance: lookups = 74 / hit rate = 44%
+# strcache performance: lookups = 171 / hit rate = 46%
 # hash-table stats:
-# Load=41/8192=1%, Rehash=0, Collisions=0/74=0%
-# Finished Make data base on Thu Jan 12 00:13:29 2023
+# Load=92/8192=1%, Rehash=0, Collisions=0/171=0%
+# Finished Make data base on Sat Jan 14 17:45:02 2023
 
  

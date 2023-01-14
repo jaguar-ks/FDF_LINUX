@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:39:01 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/12 00:14:56 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2023/01/13 02:49:23 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 // # include <mlx.h> // MAC
 # include "../mlx/mlx.h" // LINUX
 
-# define W_HT 750
-# define W_WT 500
+# define W_HT 900
+# define W_WT 600
 
 /*the map demantions*/
 typedef struct f_dmt
@@ -52,6 +52,9 @@ typedef struct f_fdf
 	t_inf	**crd;
 	t_dmt	dm;
 	int		du;
+	double	zs;
+	double	i;
+	double	j;
 }	t_fdf;
 /****************************/
 /*Cordination of a point for drawing*/
@@ -76,6 +79,9 @@ t_pst	init_point(t_inf cr);
 t_pst	start_point(t_inf cr);
 t_pst	next_x(t_fdf f, t_pst st);
 t_pst	next_y(t_fdf f, t_pst st);
+double	take_z_scale(t_fdf f);
+double	take_j(t_fdf f);
+double		take_i(t_fdf f);
 /****************************/
 /*SRC DIR*/
 t_inf	**read_map(char *mp, char **map);

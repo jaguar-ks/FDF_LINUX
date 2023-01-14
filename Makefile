@@ -6,7 +6,7 @@
 #    By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 17:17:31 by deman_wolf        #+#    #+#              #
-#    Updated: 2023/01/11 23:51:35 by deman_wolf       ###   ########.fr        #
+#    Updated: 2023/01/13 02:42:16 by deman_wolf       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,14 +15,15 @@ MD_S = 	parcing.c\
 	 	draw_map.c\
 		main.c\
 
-T_S = error.c\
+T_S = checks.c\
+		error.c\
 		hex_to_dec.c\
-		take_dm.c\
-		matrix_len.c\
-		checks.c\
 		init_drawing_unit.c\
-		next_point.c\
 		init_point.c\
+		matrix_len.c\
+		next_point.c\
+		take_dm.c\
+		take_z_scale.c\
 
 O_DIR = obj
 
