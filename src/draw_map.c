@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:27:41 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/14 20:56:53 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/14 21:06:22 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,17 @@ void	init_utils(t_fdf *f)
 	f->j = take_j(*f);
 }
 
+void	draw_x_y(t_fdf f, t_pst st, t_pst x, t_pst y)
+{
+	draw_line(f, st, x);
+	draw_line(f, st, y);
+}
+
 void	draw_map(t_fdf f)
 {
 	t_pst	st;
 	t_pst	nt;
-	t_pst	j;
-	t_pst	i;
+	t_draw	d;
 	int		y;
 	int		x;
 
@@ -35,17 +40,16 @@ void	draw_map(t_fdf f)
 	while (++y < f.dm.ht - 1)
 	{
 		x = 0;
-		i = next_x_crd(f, st, f.crd[y][x], f.crd[y][x + 1]);
-		j = next_y_crd(f, st, f.crd[y][x], f.crd[y + 1][x]);
-		nt = j;
+		d.x = next_x_crd(f, st, f.crd[y][x], f.crd[y][x + 1]);
+		d.y = next_y_crd(f, st, f.crd[y][x], f.crd[y + 1][x]);
+		nt = d.y;
 		while (x < f.dm.wt - 1)
 		{
-			draw_line(f, st, i);
-			draw_line(f, st, j);
+			draw_x_y(f, st, d.x, d.y);
 			x++;
-			st = i;
-			j = next_y_crd(f, st, f.crd[y][x], f.crd[y + 1][x]);
-			i = next_x_crd(f, st, f.crd[y][x], f.crd[y][x + 1]);
+			st = d.x;
+			d.y = next_y_crd(f, st, f.crd[y][x], f.crd[y + 1][x]);
+			d.x = next_x_crd(f, st, f.crd[y][x], f.crd[y][x + 1]);
 		}
 		st = nt;
 	}

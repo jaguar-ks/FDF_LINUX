@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:39:01 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/14 19:47:16 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/14 21:05:07 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,12 @@ typedef struct f_pst
 	double	y;
 	int		cl;
 }	t_pst;
-
 /****************************/
+typedef struct f_draw
+{
+	t_pst	x;
+	t_pst	y;
+}	t_draw;
 /*TOOLS DIR*/
 int		chck_opn(char *fl);
 int		chck_map(char **map);
