@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:27:41 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/13 03:07:56 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2023/01/14 20:22:57 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,58 +26,23 @@ void	draw_map(t_fdf f)
 	f.i = take_i(f);
 	f.j = take_j(f);
 	st = start_point(f.crd[0][0]);
-	i = st;
-	j = st;
-	y = -1;
-	while(++y < f.dm.ht - 1)
+	y = 0;
+	while (y < f.dm.ht - 1)
 	{
-		x = -1;
-		i.x += f.i;
-		j.x += f.i;
-		i.y -= f.j;
-		j.y += f.j;
-		st.cl = f.crd[y][x + 1].cl;
-		i.cl = f.crd[y][x + 2].cl;
-		j.cl = f.crd[y + 1][x + 1].cl;
+		x = 0;
+		i = next_x_crd(f, st, f.crd[y][x], f.crd[y][x + 1]);
+		j = next_y_crd(f, st, f.crd[y][x], f.crd[y + 1][x]);
 		nt = j;
-		while (++x < f.dm.wt - 1)
+		while (x < f.dm.wt - 1)
 		{
-			if (x == 0)
-			{
-				draw_line(f, st, i);
-				draw_line(f, st, j);
-			}
-			else
-			{
-				st = i;
-				i.x += f.i;
-				j.x += f.i;
-				if (f.crd[y][x].z == f.crd[y][x + 1].z && f.crd[y][x].z != f.crd[y + 1][x].z)
-				{
-					i.y -= f.j;
-					j.y = (j.y + f.j) - (f.crd[y][x + 1].z * f.zs);
-				}
-				else if (f.crd[y][x].z == f.crd[y + 1][x].z && f.crd[y][x].z != f.crd[y][x + 1].z)
-				{
-					j.y += f.j;
-					i.y = (i.y - f.j) + (f.crd[y][x].z * f.zs);
-				}
-				else if (f.crd[y][x].z != f.crd[y][x + 1].z && f.crd[y][x].z != f.crd[y + 1][x].z)
-				{
-					j.y = (j.y + f.j) - (f.crd[y][x].z * f.zs);
-					i.y = (i.y - f.j) + (f.crd[y][x].z * f.zs);
-				}
-				else
-				{
-					i.y -= f.j;
-					j.y += f.j;
-				}
-				i.cl = f.crd[y][x + 2].cl;
-				j.cl = f.crd[y + 1][x + 1].cl;
-				draw_line(f, st, i);
-				draw_line(f, st, j);
-			}
+			draw_line(f, st, i);
+			draw_line(f, st, j);
+			x++;
+			st = i;
+			j = next_y_crd(f, st, f.crd[y][x], f.crd[y + 1][x]);
+			i = next_x_crd(f, st, f.crd[y][x], f.crd[y][x + 1]);
 		}
+		y++;
 		st = nt;
 	}
 }
