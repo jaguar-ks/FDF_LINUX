@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:58:37 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/14 19:44:16 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/14 20:37:27 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_pst	next_y(t_fdf f, t_pst st)
 	t_pst	en;
 	int		agl;
 
-	agl = 6;
+	agl = 4;
 	en.x = st.x + (int)(f.du * cos(M_PI / agl));
 	en.y = st.y + (int)(f.du * sin(M_PI / agl));
 	en.cl = st.cl;
