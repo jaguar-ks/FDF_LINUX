@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 20:16:54 by deman_wolf        #+#    #+#             */
-/*   Updated: 2023/01/13 00:09:54 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2023/01/14 20:57:03 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,6 @@ int	main(int ac, char **av)
 		f.mlx = mlx_init();
 		f.win = mlx_new_window(f.mlx, W_HT, W_WT, av[1]);
 		draw_map(f);
-		// st.x = 50;
-		// en.x = 170;
-		// st.y = 150;
-		// en.y = 360;
-		// st.cl = 0xFFFF;
-		// en.cl = 0xFFFFFF;
-		// draw_line(f, st, en);
 		mlx_loop(f.mlx);
 	}
 }

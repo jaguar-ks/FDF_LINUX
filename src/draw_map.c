@@ -6,11 +6,19 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:27:41 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/14 20:22:57 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/14 20:56:53 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../inc/fdf.h"
+
+void	init_utils(t_fdf *f)
+{
+	f->du = init_drawing_unit(f->dm);
+	f->zs = take_z_scale(*f);
+	f->i = take_i(*f);
+	f->j = take_j(*f);
+}
 
 void	draw_map(t_fdf f)
 {
@@ -21,13 +29,10 @@ void	draw_map(t_fdf f)
 	int		y;
 	int		x;
 
-	f.du = init_drawing_unit(f.dm);
-	f.zs = take_z_scale(f);
-	f.i = take_i(f);
-	f.j = take_j(f);
+	init_utils(&f);
 	st = start_point(f.crd[0][0]);
-	y = 0;
-	while (y < f.dm.ht - 1)
+	y = -1;
+	while (++y < f.dm.ht - 1)
 	{
 		x = 0;
 		i = next_x_crd(f, st, f.crd[y][x], f.crd[y][x + 1]);
@@ -42,7 +47,6 @@ void	draw_map(t_fdf f)
 			j = next_y_crd(f, st, f.crd[y][x], f.crd[y + 1][x]);
 			i = next_x_crd(f, st, f.crd[y][x], f.crd[y][x + 1]);
 		}
-		y++;
 		st = nt;
 	}
 }
