@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 00:08:27 by deman_wolf        #+#    #+#             */
-/*   Updated: 2023/01/14 20:40:19 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/14 20:57:41 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ double	take_j(t_fdf f)
 	st = start_point(f.crd[0][0]);
 	x = next_x(f, st);
 	y = next_y(f, st);
-	j = (y.y - x.y)/2;
+	j = (y.y - x.y) / 2;
 	return (j);
 }
 
