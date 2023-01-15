@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:39:01 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/14 21:05:07 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/15 22:16:45 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,9 @@ t_pst	next_x_crd(t_fdf f, t_pst st, t_inf s, t_inf e);
 t_pst	next_y_crd(t_fdf f, t_pst st, t_inf s, t_inf e);
 /****************************/
 /*SRC DIR*/
-t_inf	**read_map(char *mp, char **map);
+int		map_len(int fd);
+int		map_wt(int fd);
+t_inf	**read_map(char *mp, t_fdf f);
 void	draw_line(t_fdf f, t_pst st, t_pst en);
 void	draw_map(t_fdf f);
 /****************************/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   take_dm.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 20:22:25 by deman_wolf        #+#    #+#             */
-/*   Updated: 2023/01/10 20:30:08 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2023/01/15 22:29:49 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 t_dmt	take_dmnt(char *map)
 {
+	int		fd;
 	t_dmt	dm;
-	t_rd	rd;
 
-	rd.y = ft_split(map, '\n');
-	dm.ht = mtx_len(rd.y);
-	rd.x = ft_split(rd.y[0], ' ');
-	dm.wt = mtx_len(rd.x);
-	deallocate(rd.y);
-	deallocate(rd.x);
-	free(map);
+	fd = chck_opn(map);
+	dm.ht = map_len(fd);
+	printf("[Done taking the hight]\n");
+	fd = chck_opn(map);
+	dm.wt = map_wt(fd);
+	printf("[Done taking the whight]\n");
 	return (dm);
 }

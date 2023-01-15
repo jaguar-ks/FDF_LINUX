@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 17:52:13 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/11 14:05:21 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/15 23:08:15 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,21 @@ int	hex_to_dec(char *s)
 	r = 0;
 	while (s[++i])
 	{
-		if (!ft_isdigit(s[i]))
+		if (ft_isalnum(s[i]))
 		{
-			if (s[i] >= 'A' && s[i] <= 'F')
-				s[i] = ft_tolower(s[i]);
-			if (s[i] > 'f' || s[i] < 'a')
-				exit(error(-3));
-			r = (r * 16) + (s[i] - 87);
+			if (!ft_isdigit(s[i]))
+			{
+				if (s[i] >= 'A' && s[i] <= 'Z')
+					s[i] = ft_tolower(s[i]);
+				if (s[i] < 'a' || s[i] > 'f')
+					exit(error(-3));
+				r = (r * 16) + (s[i] - 87);
+			}
+			else
+				r = (r * 16) + (s[i] - 48);
 		}
 		else
-			r = (r * 16) + (s[i] - 48);
+			break ;
 	}
 	return (r);
 }
