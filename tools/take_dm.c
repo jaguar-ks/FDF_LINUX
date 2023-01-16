@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 20:22:25 by deman_wolf        #+#    #+#             */
-/*   Updated: 2023/01/16 22:04:06 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/16 22:59:10 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ t_dmt	take_dmnt(char *map)
 	t_dmt	dm;
 
 	fd = chck_opn(map);
-	dm.ht = map_len(fd);
-	fd = chck_opn(map);
-	dm.wt = map_wt(fd);
+	map_len(fd, &dm);
 	return (dm);
 }

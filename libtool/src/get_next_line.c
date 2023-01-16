@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 14:10:03 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/15 22:27:38 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/16 23:20:42 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ char	*gnl(int fd)
 	i = 1;
 	while (i && !ft_strchr(r, '\n'))
 	{
-		bf = (char *)malloc(10000);
-		i = read(fd, bf, 10000);
+		bf = (char *)malloc(100000);
+		i = read(fd, bf, 100000);
 		if (i < 0)
 			return (free(bf), NULL);
 		bf[i] = '\0';
