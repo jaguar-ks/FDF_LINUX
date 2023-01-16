@@ -6,11 +6,33 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 20:16:54 by deman_wolf        #+#    #+#             */
-/*   Updated: 2023/01/16 23:26:00 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/17 00:52:08 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../inc/fdf.h"
+
+int	close_key(int key, t_fdf *f)
+{
+	if (key == 53)
+	{
+		mlx_destroy_window(f->mlx, f->win);
+		exit(0);
+	}
+	return (0);
+}
+
+int	close_ms(int btn, int x, int y, t_fdf *f)
+{
+	(void)x;
+	(void)y;
+	if (btn == 1)
+	{
+		mlx_destroy_window(f->mlx, f->win);
+		exit(0);
+	}
+	return (0);
+}
 
 int	main(int ac, char **av)
 {
@@ -24,10 +46,14 @@ int	main(int ac, char **av)
 		f.mlx = mlx_init();
 		f.win = mlx_new_window(f.mlx, W_HT, W_WT, av[1]);
 		draw_map(f);
+		mlx_key_hook(f.win, close_key, &f);
+		mlx_mouse_hook(f.win, close_ms, &f);
 		mlx_loop(f.mlx);
 		i = -1;
 		while (f.crd[++i])
 			free(f.crd[i]);
 		free(f.crd);
 	}
+	else
+		ft_putendl_fd("Error: To many or few arguments", 2);
 }
