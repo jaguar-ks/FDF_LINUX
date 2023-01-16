@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:27:41 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/14 21:06:22 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/16 20:23:12 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	init_utils(t_fdf *f)
 {
 	f->du = init_drawing_unit(f->dm);
-	f->zs = take_z_scale(*f);
 	f->i = take_i(*f);
 	f->j = take_j(*f);
+	f->zs = take_z_scale(*f);
 }
 
 void	draw_x_y(t_fdf f, t_pst st, t_pst x, t_pst y)
@@ -35,6 +35,9 @@ void	draw_map(t_fdf f)
 	int		x;
 
 	init_utils(&f);
+	printf("[i>>(%f)]\n", f.i);
+	printf("[j>>(%f)]\n", f.j);
+	printf("[z>>(%f)]\n", f.zs);
 	st = start_point(f.crd[0][0]);
 	y = -1;
 	while (++y < f.dm.ht - 1)

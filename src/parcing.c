@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:33:23 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/15 23:08:59 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/16 20:55:26 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	map_len(int fd)
 	return (y);
 }
 
-int	map_wt(int fd)
+int	map_wt(int fd, t_fdf f)
 {
 	int		i;
 	int		ch;
