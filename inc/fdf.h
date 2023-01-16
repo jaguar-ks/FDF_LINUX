@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:39:01 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/15 22:16:45 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/16 21:57:14 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,13 +72,11 @@ typedef struct f_draw
 }	t_draw;
 /*TOOLS DIR*/
 int		chck_opn(char *fl);
-int		chck_map(char **map);
 int		error(int er);
 int		hex_to_dec(char *s);
 int		mtx_len(char **mx);
 t_dmt	take_dmnt(char *map);
 int		init_drawing_unit(t_dmt dm);
-t_pst	init_point(t_inf cr);
 t_pst	start_point(t_inf cr);
 t_pst	next_x(t_fdf f, t_pst st);
 t_pst	next_y(t_fdf f, t_pst st);

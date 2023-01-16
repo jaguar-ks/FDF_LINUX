@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:27:41 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/16 20:23:12 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/16 21:59:16 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,6 @@ void	draw_map(t_fdf f)
 	int		x;
 
 	init_utils(&f);
-	printf("[i>>(%f)]\n", f.i);
-	printf("[j>>(%f)]\n", f.j);
-	printf("[z>>(%f)]\n", f.zs);
 	st = start_point(f.crd[0][0]);
 	y = -1;
 	while (++y < f.dm.ht - 1)

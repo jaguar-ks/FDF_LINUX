@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 12:24:27 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/11 14:02:29 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/16 21:56:13 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,26 +25,4 @@ int	chck_opn(char *fl)
 	if (fd < 0)
 		exit(error(fd));
 	return (fd);
-}
-
-int	chck_map(char **map)
-{
-	int		*x;
-	char	**ax;
-	int		i;
-	int		j;
-
-	i = -1;
-	x = (int *)malloc(mtx_len(map) * sizeof(int));
-	while (map[++i])
-	{
-		ax = ft_split(map[i], ' ');
-		x[i] = mtx_len(ax);
-		deallocate(ax);
-	}
-	j = -1;
-	while (++j < i)
-		if (x[j] != x[i - 1])
-			return (free(x), deallocate(map), -3);
-	return (free(x), 1);
 }

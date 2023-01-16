@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:33:23 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/16 20:56:58 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/16 22:04:26 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ t_inf	*take_x_z_cl(char **y, int j)
 	char	**z;
 
 	inf = (t_inf *)malloc(sizeof(t_inf) * mtx_len(y));
+	if (!inf)
+		exit(error(-4));
 	i = -1;
 	while (y[++i])
 	{
@@ -96,13 +98,14 @@ t_inf	**read_map(char *mp, t_fdf f)
 
 	fd = chck_opn(mp);
 	inf = (t_inf **)malloc(sizeof(t_inf *) * f.dm.ht + 1);
+	if (!inf)
+		exit(error(-4));
 	i = -1;
 	while (++i < f.dm.ht)
 	{
 		map = gnl(fd);
 		inf[i] = take_x_z_cl(ft_split(map, ' '), i);
 		free(map);
-		printf("[Done reading the line (%d)]\n", i + 1);
 	}
 	return (inf);
 }
