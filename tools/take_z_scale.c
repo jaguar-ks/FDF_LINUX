@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   take_z_scale.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 00:08:27 by deman_wolf        #+#    #+#             */
-/*   Updated: 2023/01/16 20:21:59 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/17 06:05:14 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ double	take_i(t_fdf f)
 {
 	t_pst	st;
 	t_pst	x;
-	int		i;
+	double	i;
 
 	st = start_point(f.crd[0][0]);
 	x = next_x(f, st);
@@ -55,7 +55,7 @@ double	take_z_scale(t_fdf f)
 	zs = y.y - x.y;
 	zs /= 6;
 	zs *= 2;
-	if (zs < 0.6)
-		zs = 0.6;
+	if (zs < 0.25)
+		zs = 0.25;
 	return (zs);
 }

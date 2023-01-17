@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   next_point.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:58:37 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/15 23:01:54 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/17 06:03:54 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ t_pst	next_y(t_fdf f, t_pst st)
 t_pst	next_x_crd(t_fdf f, t_pst st, t_inf s, t_inf e)
 {
 	t_pst	en;
-	int		z;
+	double	z;
 
 	z = e.z - s.z;
 	en.x = st.x + f.i;
@@ -51,7 +51,7 @@ t_pst	next_x_crd(t_fdf f, t_pst st, t_inf s, t_inf e)
 t_pst	next_y_crd(t_fdf f, t_pst st, t_inf s, t_inf e)
 {
 	t_pst	en;
-	int		z;
+	double	z;
 
 	z = e.z - s.z;
 	en.x = st.x + f.i;

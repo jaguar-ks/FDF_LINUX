@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 17:41:33 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/12 00:14:00 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2023/01/17 05:49:04 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		j = ft_strlen(s);
 	else
 		j = len + 1;
-	d = (char *)ft_calloc(j, sizeof(char));
+	d = (char *)malloc(j * sizeof(char) + 1);
 	if (!d)
 		return (NULL);
 	i = 0;
 	if (start >= ft_strlen(s))
 		d[i] = 0;
-	while (start <= ft_strlen(s) && i < len)
+	while (s[start] && i < len)
 		d[i++] = s[start++];
 	d[i] = '\0';
 	return (d);
