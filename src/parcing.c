@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:33:23 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/16 23:30:08 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/17 01:21:17 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ t_inf	*take_x_z_cl(char **y, int j, t_fdf f)
 	t_inf	*inf;
 	char	**z;
 
-	inf = (t_inf *)malloc(sizeof(t_inf) * f.dm.wt + 1);
+	inf = (t_inf *)malloc(sizeof(t_inf) * f.dm.wt);
 	if (!inf)
 		exit(error(-4));
 	i = -1;
@@ -73,7 +73,7 @@ t_inf	**read_map(char *mp, t_fdf f)
 	t_inf	**inf;
 
 	fd = chck_opn(mp);
-	inf = (t_inf **)malloc(sizeof(t_inf *) * f.dm.ht + 1);
+	inf = (t_inf **)malloc(sizeof(t_inf *) * f.dm.ht);
 	if (!inf)
 		exit(error(-4));
 	i = -1;
