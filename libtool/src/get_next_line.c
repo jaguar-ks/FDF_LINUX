@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 14:10:03 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/17 01:06:30 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/17 05:01:23 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*gnl(int fd)
 	i = 1;
 	while (i && !ft_strchr(r, '\n'))
 	{
-		bf = (char *)malloc(1);
+		bf = (char *)malloc(2);
 		i = read(fd, bf, 1);
 		if (i < 0)
 			return (free(bf), NULL);
