@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:33:23 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/17 01:21:17 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/17 01:27:17 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ void	map_len(int fd, t_dmt *dm)
 			break ;
 		s = ft_split(ln, ' ');
 		if (x != mtx_len(s))
+		{
+			printf("x>>[%d] | mtx>>[%d] | ln>>%d\n", x, mtx_len(s), y + 1);
 			exit(error(-3));
+		}
 	}
 	dm->ht = y;
 	dm->wt = x;

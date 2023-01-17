@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 12:02:23 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/16 23:04:19 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/17 01:30:02 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ int	mtx_len(char **mx)
 
 	i = 0;
 	while (mx[i])
+	{
+		if (!strncmp(mx[i], "\n", 2))
+			break ;
 		i++;
+	}
 	return (i);
 }
