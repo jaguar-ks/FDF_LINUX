@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:37:53 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/16 21:57:36 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/17 21:20:15 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_pst	start_point(t_inf cr)
 	t_pst	p;
 
 	p.x = ((W_HT * 250) / 1500);
-	p.y = (W_WT / 6) * 4;
+	p.y = (W_WT / 5) * 3;
 	p.cl = cr.cl;
 	return (p);
 }
