@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_drawing_unit.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 14:15:59 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/14 20:43:29 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/01/18 17:47:42 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	init_drawing_unit(t_dmt dm)
 	wd = sqrt(pow(W_HT, 2) + pow(W_WT, 2));
 	md = sqrt(pow(dm.ht, 2) + pow(dm.wt, 2));
 	du = (wd / 2) / md;
-	if (du < 2)
-		du = 2;
+	if (du < 3)
+		du = 3;
 	return (du);
 }

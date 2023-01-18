@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:33:23 by faksouss          #+#    #+#             */
-/*   Updated: 2023/01/17 06:08:54 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2023/01/18 17:51:48 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ void	map_len(int fd, t_dmt *dm)
 			break ;
 		s = ft_split(ln, ' ');
 		if (x != mtx_len(s))
+		{
+			printf("[%d][%d][%d]\n", x, mtx_len(s), y+1);
 			exit(error(-3));
+		}	
 	}
 	dm->ht = y;
 	dm->wt = x;
